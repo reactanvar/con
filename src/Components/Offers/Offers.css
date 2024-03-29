@@ -1,0 +1,50 @@
+.offers {
+  width: 75%;
+  margin: 80px auto;
+  padding: 100px 50px; 
+  border-radius: 30px;
+  margin-bottom: 150px;
+  color: white;
+  background-size: cover;
+  background: url(https://rare-gallery.com/mocahbig/422464-ship-container-sea-container-ship-water-aerial-view.jpg);
+}
+
+.offers-left {
+  width: 50%;
+}
+
+
+
+.offers p {
+  margin: 40px 0;
+  max-width: 600px;
+  display: block;
+}
+.offers a {
+  padding: 15px 40px;
+  color: white;
+  background: #0088D6;
+  border-radius: 10px;
+}
+
+.offers-left button {
+  width: 282px;
+  height: 70px;
+  border-radius: 35px;
+  background: #ff4141;
+  border: none;
+  color: white;
+  font-size: 22px;
+  font-weight: 500;
+  margin-top: 30px;
+  cursor: pointer;
+}
+
+.offers-right {
+  width: 50%;
+  padding-top: 50px;
+}
+
+.offers-right img{
+  width: 100%;
+}

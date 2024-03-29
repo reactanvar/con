@@ -1,0 +1,86 @@
+.wrapper{
+  max-width: 1240px;
+  margin: 0 auto;
+}
+*{
+  padding: 0;
+  margin: 0;
+}
+
+
+/* Responsive Menu on small sizes */
+.responsive_menu{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100vh;
+  background: white;
+}
+.responsive_menu  li {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 18pt;
+  list-style-type: none;
+  display: block;
+}
+
+#close_burger_menu{
+  position: absolute;
+  top: 25px;
+  right: 0;
+  font-size: 30pt;
+  display: flex;
+}
+.element_img_left{
+  position: fixed;
+  left: -0px;
+  top: 100px;
+  z-index: -1;
+}
+.element_img_right{
+  position: fixed;
+  right: 10px;
+  bottom: 20%;
+  z-index: -1;
+}
+.img_linear{
+  z-index: -1;
+  bottom: -850px;
+  filter: blur(100px);
+  left: 0;
+  position: fixed;
+}
+
+
+
+
+@media screen and (max-width: 578px){}
+@media screen and (max-width: 768px){
+  .wrapper{
+    max-width: 90% !important;
+  }
+}
+
+@media screen and (max-width: 992px){
+
+}
+
+@media screen and (max-width: 1200px){}
+
+@media screen and (max-width: 1440px){
+  .wrapper{
+    max-width: 85%;
+    margin: 0 auto !important;
+  }
+}
+
+body{
+  overflow-x: hidden;
+}
