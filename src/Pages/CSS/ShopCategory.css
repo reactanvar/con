@@ -22,7 +22,7 @@
 .shopcategory-products {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  row-gap: 80px;
+  row-gap: 0px;
 }
 
 .shopcategory-loadmore {

@@ -5,15 +5,15 @@ const LoginSignup = () => {
   return (
     <div className="loginsignup">
       <div className="loginsignup-container">
-        <h1>Sign Up</h1>
+        <h1>Registratsiya</h1>
         <div className="loginsignup-fields">
-          <input type="text" placeholder="Your Name" />
-          <input type="email" placeholder="Email Address" />
-          <input type="password" placeholder="Password" />
+          <input type="text" placeholder="Ism" />
+          <input type="email" placeholder="Email" />
+          <input type="password" placeholder="Parol " />
         </div>
-        <Button>Container</Button>
+        <Button>Keyingisi</Button>
         <p className="loginsignup-login">
-          Already have an account <span>Login here</span>
+          Allaqachon hisobingiz bormi? <span>Login</span>
         </p>
         {/* <div className="loginsignup-agree">
           <input type="checkbox" name="" id="" />

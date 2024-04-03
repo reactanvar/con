@@ -9,8 +9,8 @@ const Shop = () => {
   return (
     <div>
       <Hero />
-      <Popular />
       <NewCollections />
+      <Popular />
     </div>
   );
 };

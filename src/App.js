@@ -35,18 +35,18 @@ function App() {
         <Routes>
           <Route path="/" element={<Shop />} />
           <Route
-            path="/storage-containers"
-            element={<ShopCategory category="storage-conatiners" />}
+            path="/barcha-konteynerlar"
+            element={<ShopCategory category="konteyner" />}
           />
           <Route
-            path="/shipping-containers"
-            element={<ShopCategory category="shipping-containers" />}
+            path="/ehtiyot-qismlar"
+            element={<ShopCategory category="ehtiyotQism" />}
           />
           <Route path="product" element={<Product />}>
             <Route path=":productId" element={<Product />}></Route>
           </Route>
-          <Route path="/cart" element={<Cart />} />
-          <Route path="/login" element={<LoginSignup />} />
+          {/* <Route path="/cart" element={<Cart />} /> */}
+          {/* <Route path="/login" element={<LoginSignup />} /> */}
         </Routes>
         <Footer />
       </BrowserRouter>

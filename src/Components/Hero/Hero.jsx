@@ -12,20 +12,22 @@ const Hero = () => {
   return (
     <main>
       <div className="hero wrapper">
-  
-  <div className="hero-left">
-    <h1>Ijaraga konteynerlar Biz konteyner savdogarmiz</h1>
-    <p>
-    O'lchamlar Tashqi o'lcham Ichki o'lcham Uzunligi 6036 mm 5898 mm Kengligi 2438 mm 2362 mm Balandligi 2591 mm 2393 mm Tare Maks. foydali yuk Maks. yalpi 1970 kg 28510 kg 30480 kg Konteynerlarni sotib olish yoki ijaraga olish siz uchun eng yaxshi variant ekanligini bilish uchun turli omillarni hisobga olishingiz kerak. CARU konteynerlarida biz ikkala variantni ham taklif qilamiz. Quyida konteynerlarni ijaraga olish haqida bilishingiz kerak bo'lgan hamma narsani o'qishingiz mumkin va qaysi birini tanlash eng yaxshisidir
-    </p>
-    <Button className="view_btn"><NavLink to='/storage-containers'>Yangilarini Ko'rish</NavLink></Button>
-  </div>
-  <div className="hero-right">
-    <img src={hero_img} alt="" />
-  </div>
-</div>
-{/* <Offers/> */}
-{/* <NewsLetter/> */}
+
+        <div className="hero-left">
+          <h1>Barcha turdagi vagon ehtiyot qismlari</h1>
+          <p>
+
+            Biz faqat tarixga ega bo'lgan temir yo'l ehtiyot qismlarini sotamiz va har qanday yuk vagonlarini ta'mirlash uchun barcha kerakli ehtiyot qismlarni tezda depongizga yetkazib beramiz! Temir yo'l vagonlari uchun ham yangi, ham foydalanilgan ehtiyot qismlarni taqdim eta olamiz, bizning qismlarimiz ikki darajali sinovdan o'tadi, bu ularning sifatini kafolatlaydi!
+          </p>
+          <Button className="view_btn"><NavLink to='/ehtiyot-qismlar'>Yangilarini Ko'rish</NavLink></Button>
+        </div>
+        <div className="hero-right">
+          {/* <img src={hero_img} alt="" /> */}
+          <img src="https://transenergytrade.ru/img/services/5edd455928cf7.png" alt="" />
+        </div>
+      </div>
+      {/* <Offers/> */}
+      {/* <NewsLetter/> */}
     </main>
   );
 };

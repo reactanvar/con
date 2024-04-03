@@ -6,7 +6,6 @@ import { NavLink } from "react-router-dom";
 import img from "../Components/Assets/Container-PNG-Image-File.png";
 const ShopCategory = (props) => {
   const { all_product } = useContext(ShopContext);
-
   const [products, setProducts] = useState([]);
 
   useEffect(() => {
@@ -37,9 +36,13 @@ const ShopCategory = (props) => {
       </div>
       <div className="shopcategory-products ">
         {products.map((item, idx) => {
+          
           return (
             <>
+            {item.category == props.category && 
+            
             <Item
+              category={item.category}
               key={idx}
               id={item.id}
               name={item.name}
@@ -47,6 +50,7 @@ const ShopCategory = (props) => {
               new_price={item.price}
               old_price={item.oldPrice}
             />
+            }
             
             </>
           );  

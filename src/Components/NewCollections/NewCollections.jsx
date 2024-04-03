@@ -28,7 +28,7 @@ const NewCollections = () => {
       <div className="title">
 
         <h1>
-          Bizdagi boshqa mahsulotlar
+          Vagonlar uchun barcha turdagi ehtiyot qismlar
         </h1>
       </div>
 
@@ -37,14 +37,18 @@ const NewCollections = () => {
       <div className="collections">
         {products.map((item, idx) => {
           return (
-            <Item
-              key={idx}
-              id={item.id}
-              name={item.name}
-              image={"https://containers-backend.onrender.com/" + item.image}
-              new_price={item.price}
-              old_price={item.oldprice}
-            />
+            <>
+              {item.category == "ehtiyotQism" &&
+                <Item
+                  key={idx}
+                  id={item.id}
+                  name={item.name}
+                  image={"https://containers-backend.onrender.com/" + item.image}
+                  new_price={item.price}
+                  old_price={item.oldprice}
+                />
+              }
+            </>
           );
         })}
       </div>

@@ -27,7 +27,7 @@ const Popular = () => {
     <div className="popular wrapper">
       <div className="title">
         <h1 className="title_section">
-          Bizning eng yaxshi sotiladigan mahsulotlarimiz
+          Barcha xildagi sotiladigan vagonlar
         </h1>
       </div>
 
@@ -35,14 +35,16 @@ const Popular = () => {
         {products.map((item, idx) => {
           return (
             <>
-              <Item
-                key={idx}
-                id={item.id}
-                name={item.name}
-                image={"https://containers-backend.onrender.com/" + item.image}
-                new_price={item.price}
-                old_price={item.oldPrice}
-              />
+              {item.category == "konteyner" &&
+                <Item
+                  key={idx}
+                  id={item.id}
+                  name={item.name}
+                  image={"https://containers-backend.onrender.com/" + item.image}
+                  new_price={item.price}
+                  old_price={item.oldprice}
+                />
+              }
             </>
           );
         })}

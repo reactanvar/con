@@ -3,7 +3,9 @@
   margin-top: 80px;
   margin-bottom: 100px;
 }
-
+.title {
+  text-align: center;
+}
 .new-collections h1 {
   color: #171717;
   text-align: center;

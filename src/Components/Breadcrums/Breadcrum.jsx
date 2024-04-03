@@ -3,8 +3,8 @@ import "./Breadcrum.css";
 const Breadcrum = (props) => {
   const { product } = props;
   return (
-    <div className="breadcrum">
-      ASOSIY / {product.name}
+    <div className="breadcrum" >
+      ASOSIY / {console.log(product)}
     </div>
   );
 };

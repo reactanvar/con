@@ -12,6 +12,13 @@ const Navbar = () => {
   const { getTotalCartItems } = useContext(ShopContext);
   const [ShowNavbar, setShowNavbar] = useState(false)
   return (
+      <header>
+      {/* <div className="small_nav wrapper">
+          <p>Buyurtmangizni 1 kunda yetkazib beramiz</p>
+          <ul>
+            <li>Savob-javoblar</li>
+          </ul>
+      </div> */}
     <div className="navbar wrapper">
       <Link style={{ textDecoration: "none" }} to="/">
         <div className="nav-logo">
@@ -22,11 +29,11 @@ const Navbar = () => {
       <ul className="nav-menu">
 
         <li> <Link to="/">Bosh Sahifa</Link></li>
-        <li> <Link to="/storage-containers"> Saqlash konteynerlari </Link></li>
-        <li><Link to="/shipping-containers">  Yuk tashish konteynerlari </Link></li>
+        <li><Link to="/ehtiyot-qismlar">Vagonlar uchun ehtiyot qismlar </Link></li>
+        <li> <Link to="/barcha-konteynerlar">Vagonlar </Link></li>
 
         <div className="nav-login-cart">
-          <Link to="/login"> Login</Link>
+          {/* <Link to="/login"> Login</Link> */}
           <Link to="/cart">  <p className="icon_cart"><IoCart /></p> </Link>
           <div className="nav-cart-count">{getTotalCartItems()}</div>
 
@@ -39,14 +46,15 @@ const Navbar = () => {
             <button onClick={()=> {setShowNavbar(false)}} className="burger_menu" id="close_burger_menu"><IoCloseSharp /></button>
           <ul>
             <li><Link onClick={()=> {setShowNavbar(false)}} to="/">Bosh Sahifa</Link></li>
-            <li><Link onClick={()=> {setShowNavbar(false)}} to="/storage-containers"> Saqlovchi Konteynerlar</Link></li>
-            <li><Link onClick={()=> {setShowNavbar(false)}} to="/shipping-containers">Tashuvchi Konteynerlar</Link></li>
+            <li><Link onClick={()=> {setShowNavbar(false)}} to="/ehtiyot-qismlar">Ehtiyot qismlar</Link></li>
+            <li><Link onClick={()=> {setShowNavbar(false)}} to="/barcha-konteynerlar">Vagonlar</Link></li>
           </ul>
 
         </div>
       }
 
     </div>
+      </header>
   );
 };
 
