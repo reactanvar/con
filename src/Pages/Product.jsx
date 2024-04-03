@@ -14,7 +14,7 @@ const Product = () => {
   useEffect(() => {
     const fetchData = async () => {
       const res = await fetch(
-        "https://containers-backend.onrender.com/api/product/all/" + productId
+        "https://devlans-43e2a3ba66d7.herokuapp.com/api/product/all/" + productId
       );
 
       if (!res.ok) {

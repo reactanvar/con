@@ -17,7 +17,7 @@ const ProductDisplay = (props) => {
           <img src={product.image} alt="" />
         </div> */}
         <div className="productdisplay-img">
-          <img className="productdisplay-main-img" src={"https://containers-backend.onrender.com/" + product.image} alt="" />
+          <img className="productdisplay-main-img" src={"https://devlans-43e2a3ba66d7.herokuapp.com/" + product.image} alt="" />
         </div>
       </div>
       <div className="productdisplay-right">

@@ -11,7 +11,7 @@ const ShopCategory = (props) => {
   useEffect(() => {
     const fetchData = async () => {
       const res = await fetch(
-        "https://containers-backend.onrender.com/api/product/all"
+        "https://devlans-43e2a3ba66d7.herokuapp.com/api/product/all"
       );
 
       if (!res.ok) {
@@ -46,7 +46,7 @@ const ShopCategory = (props) => {
               key={idx}
               id={item.id}
               name={item.name}
-              image={"https://containers-backend.onrender.com/" + item.image}
+              image={"https://devlans-43e2a3ba66d7.herokuapp.com/" + item.image}
               new_price={item.price}
               old_price={item.oldPrice}
             />

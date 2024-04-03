@@ -31,7 +31,7 @@ const CartItems = () => {
           return (
             <div key={idx}>
               <div className="cartitems-format cartitems-format-main">
-                <img src={"https://containers-backend.onrender.com/" + e.image} alt="" className="carticon-product-icon" />
+                <img src={"https://devlans-43e2a3ba66d7.herokuapp.com/" + e.image} alt="" className="carticon-product-icon" />
                 <p className="product_name">{e.name}</p>
                 <p className="product_price">{parseFloat(e.price)}</p>
                 <button className="cartitems-quantity">
