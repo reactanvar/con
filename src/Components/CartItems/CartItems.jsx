@@ -83,24 +83,24 @@ const CartItems = () => {
 
           <div className="payment_modal">
             <button className='apple_pay'>
-              <p> <IoLogoApple /><span>Pay</span></p>
+              <p> <IoLogoApple /><span>Apple pay</span></p>
             </button>
             <label>
-              <small>Person Name</small>
+              <small>Ismi</small>
               <input type="text" />
             </label>
             <label>
-              <small>Card Number</small>
+              <small>Karta raqami</small>
               <input type="text" placeholder='1234 5678 1234 1234' />
             </label>
             <div className='pay_infos'>
               <label>
-                <small>Expiry</small>
+                <small>Muddati</small>
                 <input type="text" placeholder='MM/YYYY' />
               </label>
               <label>
                 <small>CVV/CVC</small>
-                <input type="password" placeholder='' value="12345678" />
+                <input type="password" placeholder='12345678' value="" />
               </label>
             </div>
             <label>

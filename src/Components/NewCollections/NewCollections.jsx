@@ -37,7 +37,7 @@ const NewCollections = () => {
       <div className="collections">
         {products.map((item, idx) => {
           return (
-            <>
+            <div id={idx}>
               {item.category == "ehtiyotQism" &&
                 <Item
                   key={idx}
@@ -48,7 +48,7 @@ const NewCollections = () => {
                   old_price={item.oldprice}
                 />
               }
-            </>
+            </div>
           );
         })}
       </div>

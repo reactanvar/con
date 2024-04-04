@@ -10,7 +10,9 @@
   width: 50%;
   padding-right: 60px;
 }
-
+#hero_right{
+  display: none;
+}
 .hero-left .view_btn{
   display: inline-block;
   padding: 20px 20px;
@@ -83,13 +85,24 @@
 
 @media screen and (max-width: 992px){
   .hero {
+    width: 100%;
+    text-align: center;
     display: block;
   }
   .hero-left {
     width: 100%;
-  }
+    padding-right: 0px;
+}
   .hero-right{
     width: 100%;
+    display: none;
+  }
+  #hero_right{
+    width: 100%;
+    display: flex;
+  }
+  #hero_right img{
+    transform: translateY(-40px);
   }
 }
 

@@ -12,7 +12,10 @@ const Hero = () => {
   return (
     <main>
       <div className="hero wrapper">
-
+      <div className="hero-right" id="hero_right">
+          {/* <img src={hero_img} alt="" /> */}
+          <img src="https://transenergytrade.ru/img/services/5edd455928cf7.png" alt="" />
+        </div>
         <div className="hero-left">
           <h1>Barcha turdagi vagon ehtiyot qismlari</h1>
           <p>

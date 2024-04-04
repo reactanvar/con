@@ -42,9 +42,9 @@ const ShopCategory = (props) => {
             {item.category == props.category && 
             
             <Item
+              id={item.id}
               category={item.category}
               key={idx}
-              id={item.id}
               name={item.name}
               image={"https://devlans-43e2a3ba66d7.herokuapp.com/" + item.image}
               new_price={item.price}

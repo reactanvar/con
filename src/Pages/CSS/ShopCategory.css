@@ -1,5 +1,6 @@
 .shopcategory-banner {
   display: block;
+  width: 100%;
   margin: 30px auto;
 }
 
@@ -22,7 +23,6 @@
 .shopcategory-products {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  row-gap: 0px;
 }
 
 .shopcategory-loadmore {
