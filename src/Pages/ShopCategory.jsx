@@ -3,7 +3,7 @@ import "./CSS/ShopCategory.css";
 import { ShopContext } from "../Context/ShopContext";
 import Item from "../Components/Item/Item";
 import { NavLink } from "react-router-dom";
-import img from "../Components/Assets/Container-PNG-Image-File.png";
+
 const ShopCategory = (props) => {
   const { all_product } = useContext(ShopContext);
   const [products, setProducts] = useState([]);
@@ -11,7 +11,7 @@ const ShopCategory = (props) => {
   useEffect(() => {
     const fetchData = async () => {
       const res = await fetch(
-        "https://devlans-43e2a3ba66d7.herokuapp.com/api/product/all"
+        "http://194.26.232.140/api/product/all"
       );
 
       if (!res.ok) {
@@ -36,24 +36,24 @@ const ShopCategory = (props) => {
       </div>
       <div className="shopcategory-products ">
         {products.map((item, idx) => {
-          
+
           return (
             <>
-            {item.category == props.category && 
-            
-            <Item
-              id={item.id}
-              category={item.category}
-              key={idx}
-              name={item.name}
-              image={"https://devlans-43e2a3ba66d7.herokuapp.com/" + item.image}
-              new_price={item.price}
-              old_price={item.oldPrice}
-            />
-            }
-            
+              {item.category == props.category &&
+
+                <Item
+                  id={item._id}
+                  category={item.category}
+                  key={idx}
+                  name={item.name}
+                  image={"http://194.26.232.140/" + item.image}
+                  new_price={item.price}
+                  old_price={item.oldPrice}
+                />
+              }
+
             </>
-          );  
+          );
         })}
       </div>
     </div>

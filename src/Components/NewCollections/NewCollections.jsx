@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import "./NewCollections.css";
-import img from "../Assets/Container-PNG-Image-File.png";
 import Item from "../Item/Item";
 const NewCollections = () => {
   const [products, setProducts] = useState([]);
@@ -8,7 +7,7 @@ const NewCollections = () => {
   useEffect(() => {
     const fetchData = async () => {
       const res = await fetch(
-        "https://devlans-43e2a3ba66d7.herokuapp.com/api/product/all"
+        "http://194.26.232.140/api/product/all"
       );
 
       if (!res.ok) {
@@ -37,13 +36,13 @@ const NewCollections = () => {
       <div className="collections">
         {products.map((item, idx) => {
           return (
-            <div id={idx}>
+            <div key={idx}>
               {item.category == "ehtiyotQism" &&
                 <Item
                   key={idx}
-                  id={item.id}
+                  id={item._id}
                   name={item.name}
-                  image={"https://devlans-43e2a3ba66d7.herokuapp.com/" + item.image}
+                  image={"http://194.26.232.140/" + item.image}
                   new_price={item.price}
                   old_price={item.oldprice}
                 />

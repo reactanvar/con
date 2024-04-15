@@ -2,13 +2,13 @@ import React from "react";
 import "./Item.css";
 import { motion } from "framer-motion"
 import { Link } from "react-router-dom";
+
 const Item = (props) => {
   return (
-
-    <motion.div  initial={{ y: 10 }}
-    animate={{ y: 0 }}
-    transition={{ type: "spring", stiffness: 100 }}
-    className="item">
+    <motion.div initial={{ y: 5 }}
+      animate={{ y: 0 }}
+      transition={{ type: "spring", stiffness: 100 }}
+      className="item">
       <Link to={`/product/${props.id}`}>
         <img
           style={{ width: "180px", height: "150px", objectFit: "contain", marginInline: "auto" }}
@@ -18,7 +18,6 @@ const Item = (props) => {
         />
       </Link>
       <span className="type_product">sotiladi</span>
-
       <p>{props.name}</p>
       <div className="item-prices">
         <div className="item-price-new">{props.new_price} $</div>

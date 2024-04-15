@@ -206,7 +206,10 @@
 
 
 
-
+.old_price{
+  color: rgb(198, 198, 198);
+  text-decoration: line-through;
+}
 
 
 @media screen and (max-width: 576px){
@@ -226,8 +229,8 @@
 }
 
 @media screen and (max-width: 992px){
-  .product_name{
-    display: none;
+  .cartitems-format{
+    overflow: auto;
   }
   .cartitems-format-main{
     display: flex;

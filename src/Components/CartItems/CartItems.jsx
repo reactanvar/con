@@ -1,46 +1,42 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect } from "react";
 import "./CartItems.css";
 import { ShopContext } from "../../Context/ShopContext";
 import { MdDelete } from "react-icons/md";
 import { Breadcrumbs, Button } from "@material-tailwind/react";
-import PaymentModal from "../Payment/PaymentModal";
 import { IoLogoApple } from "react-icons/io";
 import { IoIosClose } from "react-icons/io";
 import { useState } from "react";
 
-
 const CartItems = () => {
+
   const [openModal, setOpenModal] = useState(false)
-  const { getTotalCartAmount, all_product, cartItems, removeFromCart } =
-    useContext(ShopContext);
+  const { getTotalCartAmount, all_product, cartItems, removeFromCart } = useContext(ShopContext);
+
+  useEffect(() => {
+    let sum = 0;
+
+    for(let i = 0; i < cartItems.length; i++) {
+        sum += parseInt(cartItems[i].price);
+    }
+    setPrice(sum)
+  }, [])
+
+  const [price, setPrice] = useState(0)
+
   return (
     <div className="cartitems wrapper">
-
-      {/* <div className="cartitems-format-main">
-        <p>Products</p>
-        <p>Title</p>
-        <p>Price</p>
-        <p>Quantity</p>
-        <p>Total</p>
-        <p>Remove</p>
-      </div> */}
-      <hr />
-
-      {all_product.map((e, idx) => {
-        if (cartItems[e.id] > 0) {
+      {cartItems.map((e, idx) => {
+        if (true) {
           return (
             <div key={idx}>
               <div className="cartitems-format cartitems-format-main">
-                <img src={"https://devlans-43e2a3ba66d7.herokuapp.com/" + e.image} alt="" className="carticon-product-icon" />
+                <img src={"http://194.26.232.140/" + e.image} alt="" className="carticon-product-icon" />
                 <p className="product_name">{e.name}</p>
-                <p className="product_price">{parseFloat(e.price)}</p>
-                <button className="cartitems-quantity">
-                  {cartItems[e.id]}
-                </button>
-                <p>{parseFloat(e.price) * cartItems[e.id]}</p>
+                <p className="product_price">{parseFloat(e.price)}$</p>
+                <p className="old_price">{parseFloat(e.oldPrice)}$</p>
 
                 <p className="remove_btn" onClick={() => {
-                  removeFromCart(e.id);
+                  removeFromCart(e);
                 }}><MdDelete /></p>
 
               </div>
@@ -56,7 +52,7 @@ const CartItems = () => {
           <div>
             <div className="cartitems-total-item">
               <p>Oraliq narx </p>
-              <p>${getTotalCartAmount()}</p>
+              <p>${price}</p>
             </div>
             <hr />
             <div className="cartitems-total-item">
@@ -66,7 +62,7 @@ const CartItems = () => {
             <hr />
             <div className="cartitems-total-item">
               <h3>Jami</h3>
-              <h3>${getTotalCartAmount()}</h3>
+              <h3>${price}</h3>
             </div>
           </div>
           <Button onClick={() => setOpenModal(true)}>TO'LOV QILISH</Button>

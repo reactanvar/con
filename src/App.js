@@ -1,21 +1,23 @@
+// App css
 import "./App.css";
+// components and resources
 import Navbar from "./Components/Navbar/Navbar";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Shop from "./Pages/Shop";
 import ShopCategory from "./Pages/ShopCategory";
 import Product from "./Pages/Product";
-import LoginSignup from "./Pages/LoginSignup";
 import Cart from "./Pages/Cart";
 import Footer from "./Components/Footer/Footer";
 import { useEffect } from "react";
-import ImageElm from "./Components/ImageElms/ImageElm";
 import all_product from "./Components/Assets/all_product";
 
+
+// App function
 function App() {
   useEffect(() => {
     const fetchData = async () => {
       const res = await fetch(
-        "https://devlans-43e2a3ba66d7.herokuapp.com/api/product/all"
+        "http://194.26.232.140/api/product/all"
       );
       const { data } = await res.json();
       all_product.length = 0;
@@ -30,7 +32,6 @@ function App() {
   return (
     <div>
       <BrowserRouter>
-        <ImageElm />
         <Navbar />
         <Routes>
           <Route path="/" element={<Shop />} />
